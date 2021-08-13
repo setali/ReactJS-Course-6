@@ -12,12 +12,22 @@ import React from 'react'
 // import Form from './11-Form'
 // import AdvanceSetState from './12-AdvanceSetState'
 // import CreateRef from './13-CreateRef'
-import PureComponent from './14-PureComponent'
+// import PureComponent from './14-PureComponent'
+// import HOC from './15-HOC/App'
+// import Stateless from './16-Stateless'
+// import ClassVsFunctionComponent from './17-ClassVsFunctionComponent'
+// import UseState from './18-useState'
+import UseEffect from './19-UseEffect'
 class App extends React.Component {
   render () {
     return (
       <div>
-        <PureComponent />
+        <UseEffect />
+        {/* <UseState /> */}
+        {/* <ClassVsFunctionComponent /> */}
+        {/* <Stateless /> */}
+        {/* <HOC /> */}
+        {/* <PureComponent /> */}
         {/* <CreateRef /> */}
         {/* <AdvanceSetState /> */}
         {/* <Form /> */}
