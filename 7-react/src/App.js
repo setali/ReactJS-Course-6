@@ -17,12 +17,28 @@ import React from 'react'
 // import Stateless from './16-Stateless'
 // import ClassVsFunctionComponent from './17-ClassVsFunctionComponent'
 // import UseState from './18-useState'
-import UseEffect from './19-UseEffect'
+// import UseEffect from './19-UseEffect'
+// import AdvancedEffectState from './20-AdvancedEffectState'
+// import HooksRules from './21-HooksRules'
+// import CustomHook from './22-CustomHook'
+// import TodosUseState from './23-TodosUseState'
+// import UseReducer from './24-UseReducer'
+// import TodosUseReducer from './25-TodosUseReducer'
+// import UseMemo from './26-UseMemo'
+import Memo from './27-Memo'
 class App extends React.Component {
   render () {
     return (
       <div>
-        <UseEffect />
+        <Memo />
+        {/* <UseMemo /> */}
+        {/* <TodosUseReducer /> */}
+        {/* <UseReducer /> */}
+        {/* <TodosUseState /> */}
+        {/* <CustomHook /> */}
+        {/* <HooksRules /> */}
+        {/* <AdvancedEffectState /> */}
+        {/* <UseEffect /> */}
         {/* <UseState /> */}
         {/* <ClassVsFunctionComponent /> */}
         {/* <Stateless /> */}
