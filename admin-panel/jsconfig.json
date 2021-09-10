@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "actions/*": ["redux/actions/*"],
+      "reducers/*": ["redux/reducers/*"],
+      "store/*": ["redux/store/*"]
+    }
+  }
+}

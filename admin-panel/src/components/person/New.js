@@ -1,8 +1,9 @@
 import { message } from 'antd'
 import axios from 'axios'
+import { Checkbox, Form, Submit, Text } from 'components/utils/Field'
 import React, { useState } from 'react'
 import { useHistory } from 'react-router'
-import { Form, Checkbox, Submit, Text } from '../utils/Field'
+import CheckState from './CheckState'
 
 export default function New () {
   const [loading, setLoading] = useState(false)
@@ -23,6 +24,7 @@ export default function New () {
 
   return (
     <div>
+      <CheckState />
       <h2>ایجاد کابر جدید</h2>
 
       <Form initialValues={{ admin: true }} onFinish={onFinish}>
