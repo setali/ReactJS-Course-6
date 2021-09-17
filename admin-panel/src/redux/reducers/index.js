@@ -1,12 +1,15 @@
 import { combineReducers } from 'redux'
 import { persons } from './person'
-import { posts } from './post'
+import { posts, post, postsIsLoading } from './post'
 
-export default combineReducers({
+const reducer = combineReducers({
   persons,
-  posts
+  posts,
+  post,
+  postsIsLoading
 })
 
+export default reducer
 // export default function reducer (state = {}, action) {
 //   console.log(action)
 

@@ -1,34 +1,38 @@
-import React, { Component } from 'react'
-import Table from 'components/utils/Table'
-import { Link } from 'react-router-dom'
 import { EyeFilled } from '@ant-design/icons'
+import { getPosts } from 'actions/post'
+import Table from 'components/utils/Table'
+import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { setPosts } from 'actions/post'
-import request from 'tools/request'
+import { Link } from 'react-router-dom'
 
+const columns = [
+  { title: 'شناسه', key: 'id' },
+  { title: 'عنوان', key: 'title' },
+  {
+    title: '',
+    key: 'actions',
+    render: (field, record) => (
+      <Link to={`/post/${record.id}`}>
+        <EyeFilled />
+      </Link>
+    )
+  }
+]
 class List extends Component {
   componentDidMount () {
-    request('/posts').then(response => this.props.setItems(response.data))
+    this.props.getItems()
   }
 
-  columns = [
-    { title: 'شناسه', key: 'id' },
-    { title: 'عنوان', key: 'title' },
-    {
-      title: '',
-      key: 'actions',
-      render: (field, record) => (
-        <Link to={`/post/${record.id}`}>
-          <EyeFilled />
-        </Link>
-      )
-    }
-  ]
-
   render () {
+    // if (this.props.isLoading) return null
+
     return (
       <div>
-        <Table columns={this.columns} data={this.props.posts} />
+        <Table
+          columns={columns}
+          data={this.props.posts}
+          loading={this.props.isLoading}
+        />
       </div>
     )
   }
@@ -36,13 +40,15 @@ class List extends Component {
 
 const mapStateToProps = state => {
   return {
-    posts: state.posts
+    posts: state.posts,
+    isLoading: state.postsIsLoading
   }
 }
 
 const mapDispatchToProps = dispatch => {
   return {
-    setItems: data => dispatch(setPosts(data))
+    // setItems: data => dispatch(setPosts(data)),
+    getItems: () => dispatch(getPosts())
   }
 }
 

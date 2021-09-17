@@ -9,7 +9,7 @@ export default function Sidebar () {
     <Sider>
       <Menu
         style={{ width: 200 }}
-        defaultSelectedKeys={['dashboard']}
+        // defaultSelectedKeys={['dashboard']}
         defaultOpenKeys={['sub1']}
         mode='inline'
       >
@@ -18,10 +18,10 @@ export default function Sidebar () {
         </Menu.Item>
 
         <SubMenu key='sub1' icon={<UserOutlined />} title='لیست کاربران'>
-          <Menu.Item key='1'>
+          <Menu.Item key='person'>
             <Link to='/person'>لیست کاربران</Link>
           </Menu.Item>
-          <Menu.Item key='2'>
+          <Menu.Item key='person/new'>
             <Link to='/person/new'>افزودن کاربر</Link>
           </Menu.Item>
         </SubMenu>

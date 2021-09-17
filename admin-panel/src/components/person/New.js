@@ -18,8 +18,10 @@ export default function New () {
         message.success(`کاربر ${response.data.name} با موفقیت ایجاد شد.`)
         history.push('/person')
       })
-      .catch(err => console.log(err))
-      .finally(() => setLoading(false))
+      .catch(err => {
+        console.log(err)
+        setLoading(false)
+      })
   }
 
   return (
