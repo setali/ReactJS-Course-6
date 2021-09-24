@@ -21,8 +21,11 @@ import reducer from '../reducers'
 //   }
 // }
 
+const mi1 = ({ dispatch, getState }) => next => action => next(action)
+const mi2 = ({ dispatch, getState }) => next => action => next(action)
+
 // const store = createStore(reducer, applyMiddleware(myMiddleware))
 // const store = createStore(reducer, applyMiddleware(thunk))
-const store = configureStore({ reducer })
+const store = configureStore({ reducer, middleware: [mi1, mi2] })
 
 export default store
