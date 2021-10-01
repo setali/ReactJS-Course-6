@@ -1,6 +1,6 @@
-import Footer from '../components/Footer'
-import Header from '../components/Header'
-import Sidebar from '../components/Sidebar'
+import Footer from 'cmp/Footer'
+import Header from 'cmp/Header'
+import Sidebar from 'cmp/Sidebar'
 
 function Main ({ children }) {
   return (

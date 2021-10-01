@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import Main from '../../layout/Main'
 import Link from 'next/link'
 
-function User ({ users }) {
+function User ({ users = [] }) {
   console.log('Component')
   //   const [users, setUsers] = useState([])
 
@@ -35,6 +35,7 @@ export async function getServerSideProps () {
   //     'https://jsonplaceholder.typicode.com/users'
   //   )
 
+  // throw new Error('Server Error')
   const response = await fetch('https://jsonplaceholder.typicode.com/users')
   const users = await response.json()
 

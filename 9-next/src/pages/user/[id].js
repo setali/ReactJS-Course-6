@@ -3,7 +3,7 @@ import Main from '../../layout/Main'
 import { useRouter } from 'next/router'
 import axios from 'axios'
 
-function User ({ user }) {
+function User ({ user = {} }) {
   //   const router = useRouter()
 
   //   console.log(router.query)

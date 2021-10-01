@@ -1,9 +1,13 @@
 import Main from '../layout/Main'
 import styles from '../styles/contact.module.css'
+import Head from 'next/head'
 
 export default function Contact () {
   return (
     <Main>
+      <Head>
+        <title>NextJS Course | contact</title>
+      </Head>
       <h2 className={styles.header}>Contact us</h2>
       <p className={styles.paragraph}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod

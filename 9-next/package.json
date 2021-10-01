@@ -7,13 +7,17 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
+    "export": "next export",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.21.4",
+    "lodash": "^4.17.21",
     "next": "^11.1.2",
+    "nextjs-progressbar": "^0.0.11",
+    "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   }
